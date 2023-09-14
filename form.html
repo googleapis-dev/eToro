@@ -1,0 +1,238 @@
+<!-- Created by Mitali -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form UI</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600|Work+Sans:400,500&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+    /* Created by Mitali */
+
+/*
+Theme colors
+#ff4e50,#f9d423
+#89f7fe,#66a6ff
+#ad5389,#3c1053
+*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 72.5%; } }
+
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 80.5%; } }
+
+body {
+  background-color: #f5f5f5;
+  text-align: center; }
+
+.form {
+  background-color: white;
+  width: 35rem;
+  height: 75rem;
+  display: inline-block;
+  border-radius: 0.8rem;
+  margin-top: 2rem;
+  text-align: left;
+  box-shadow: 0 0.8rem 3rem 0.5rem rgba(0, 0, 0, 0.15); }
+  .form__image-box {
+    width: 100%;
+    height: 20rem;
+    background-image: linear-gradient(to right bottom, rgba(173, 83, 137, 0.8), rgba(60, 16, 83, 0.8)), url(https://i.imgur.com/GERCY7g.jpg);
+    background-size: cover,38rem 38rem;
+    background-position: 0, 0 -15rem;
+    border-radius: 0.8rem 0.8rem 35% 35%;
+    text-align: center;
+    position: relative; }
+    .form__image-box__icon {
+      height: 10rem;
+      display: inline;
+      margin-top: 2.3rem; }
+    .form__image-box__heading {
+      color: #ffffff;
+      font-family: "Poppins", sans-serif;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 0.2rem; }
+  .form__fields {
+    margin: 0 3rem; }
+    .form__fields__heading {
+      font-size: 2rem;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 600;
+      color: #5f5f5f;
+      margin: -1rem 0 1.2rem 0; }
+      .form__fields__heading:not(.radio-heading) {
+        margin: 1.2rem 0 0.2rem 0; }
+    .form__fields .form-field {
+      width: 100%;
+      margin: 0.5rem 0;
+      border: none;
+      border-bottom: 0.2rem solid #bd76a1;
+      font-size: 1.55rem;
+      outline: none; }
+    .form__fields .text-field {
+      padding: 0.5rem 0.5rem; }
+      .form__fields .text-field:focus::placeholder {
+        transform: translateX(150%); }
+    .form__fields .user-field {
+      padding: 0.5rem 7.7rem;
+      position: relative; }
+      .form__fields .user-field:focus::placeholder {
+        transform: translateX(180%); }
+      .form__fields .user-field-label {
+        font-size: 1.8rem;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 500;
+        color: #6a6a6a;
+        position: relative;
+        bottom: 3.2rem;
+        left: 0.5rem; }
+    .form__fields .btn {
+      display: block;
+      text-decoration: none;
+      width: 80%;
+      margin: 2rem 3rem;
+      padding: 1.35rem 0;
+      background-color: #ad5389;
+      color: white;
+      border-radius: 10rem;
+      transition: 0.5s;
+      border: none;
+      outline: none;
+      font-size: 1.8rem;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-align: center;
+      box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2); }
+      .form__fields .btn:hover {
+        transform: translateY(-0.5rem);
+        box-shadow: 0 0.5rem 3.5rem rgba(0, 0, 0, 0.2); }
+      .form__fields .btn:active {
+        transform: translateY(-0.2rem);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+    .form__fields .form-radio {
+      -webkit-appearance: none; }
+      .form__fields .form-radio:hover + label {
+        background-color: #f6f6f6; }
+      .form__fields .form-radio:checked + label {
+        border-color: #bd76a1;
+        color: #bd76a1; }
+    .form__fields .radio-label {
+      border: 0.2rem solid #b7b7b7;
+      display: inline-block;
+      height: 10rem;
+      width: 14rem;
+      border-radius: 0.5rem;
+      position: relative;
+      color: #b7b7b7; }
+      .form__fields .radio-label > .fa {
+        font-size: 3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -80%); }
+      .form__fields .radio-label > span {
+        font-size: 1.5rem;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 80%); }
+    .form__fields ::placeholder {
+      transition: all 2s;
+      font-size: 1.55rem;
+      color: #9d9d9d; }
+
+.link-yt {
+  display: inline-block;
+  text-decoration: none;
+  width: 35rem;
+  font-size: 2rem;
+  text-align: center;
+  margin: 1.5rem 0 3rem 0;
+  padding: 1.35rem 0;
+  border-radius: 0.3rem;
+  background-color: #ad5389;
+  color: white;
+  font-family: "Poppins", sans-serif; }
+
+</style>
+
+<body>
+    
+    <form class="form">
+        <div class="form__image-box">
+            
+            <img src="https://i.imgur.com/cMZHiw8.png" class="form__image-box__icon"></img>
+            
+            <h1 class="form__image-box__heading">
+                BlockChain License Form
+            
+            </h1>
+        </div>
+
+        <div class="form__fields">
+            
+            <h3 class="form__fields__heading">
+                Developer Name
+            </h3>
+            <input type="text" class="form-field text-field" placeholder="Enter Your Name">
+            
+            <h3 class="form__fields__heading">
+               Udemy Username
+            </h3>
+            <input type="text" class="form-field user-field" id="username" 
+            placeholder="Choose Username">
+            <label class="user-field-label" for="username">ude.io/</label>
+
+            <h3 class="form__fields__heading radio-heading">
+                Who are you?
+            </h3>
+            <input type="radio" name="opt" id="opt1" class="form-radio">
+            <label for="opt1" class="radio-label">
+                <i class="fa fa-diamond" aria-hidden="true"></i>
+                <span>Designer</span>
+            </label>
+            
+            <input type="radio" name="opt" id="opt2" class="form-radio">
+            <label for="opt2" class="radio-label">
+                <i class="fa fa-code" aria-hidden="true"></i>
+                <span>Developer</span>
+            </label>
+
+            <h3 class="form__fields__heading">
+                Email Id
+            </h3>
+            <input type="email" class="form-field text-field" placeholder="Enter Your Email Address">    
+            <h3 class="form__fields__heading">
+                Password
+            </h3>
+
+            <input type="password" class="form-field text-field" placeholder="Enter Your Password">    
+            <a href="#" class="btn">SUBMIT</a>
+
+        </div>
+    </form><br>
+
+
+</body>
+</html>
