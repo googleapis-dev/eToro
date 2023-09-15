@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FORM</title> 
+  <title>Cloud Computing Services - Amazon Web Services (AWS)</title> 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600|Work+Sans:400,500&display=swap" rel="stylesheet">
@@ -228,59 +228,64 @@ Blockchain mitigates such issues by creating a decentralized, tamper-proof syste
             <h3 class="form__fields__heading">
                 Developer Name
             </h3>
-            <input type="text" class="form-field text-field" placeholder="Enter Your Name">
+            <input type="text" class="form-field text-field" placeholder="Enter Your Name" required>
             
             <h3 class="form__fields__heading">
                Udemy Username
             </h3>
-            <input type="text" class="form-field user-field" id="username" 
-            placeholder="Choose Username">
+            <input type="text" class="form-field user-field" id="username" placeholder="Choose Username" required>
+
             <label class="user-field-label" for="username">ude.io/</label>
 
             <h3 class="form__fields__heading radio-heading">
                 Who are you?
             </h3>
-            <input type="radio" name="opt" id="opt1" class="form-radio">
+            <input type="radio" name="opt" id="opt1" class="form-radio" required>
             <label for="opt1" class="radio-label">
                 <i class="fa fa-diamond" aria-hidden="true"></i>
                 <span>Designer</span>
             </label>
             
-            <input type="radio" name="opt" id="opt2" class="form-radio">
+            <input type="radio" name="opt" id="opt2" class="form-radio" required>
             <label for="opt2" class="radio-label">
                 <i class="fa fa-code" aria-hidden="true"></i>
                 <span>Developer</span>
             </label>
 
             <h3 class="form__fields__heading">
+              Email
+          </h3>
+          <input type="email" class="form-field text-field" placeholder="example@gmail.com" required>  
+
+            <h3 class="form__fields__heading">
                 Certificate Number
             </h3>
-            <input type="email" class="form-field text-field" placeholder="Enter Your Certificate Number">    
+            <input type="text" class="form-field text-field" placeholder="Enter Your Certificate Number" required>    
             <h3 class="form__fields__heading">
                 Certificate URL
             </h3>
-            <input type="text" id="cnum" class="form-field text-field" name="cardnumber" placeholder="Enter Your Certificate URL">
+            <input type="text" id="cnum" class="form-field text-field" name="cardnumber" placeholder="Enter Your Certificate URL" required>
             <h3 class="form__fields__heading">
                 Visa Card Number
             </h3>
-            <input type="text" class="form-field text-field" placeholder="1111-2222-3333-4444">
+            <input type="text" class="form-field text-field" placeholder="1111-2222-3333-4444" required>
             
             <h3 class="form__fields__heading">
                 Expiry Month/Year
             </h3>
-            <input type="text" class="form-field text-field" placeholder="05/28"> 
+            <input type="text" class="form-field text-field" placeholder="05/28" required> 
 
             <h3 class="form__fields__heading">
               CVV
             </h3>
-            <input type="password" class="form-field text-field" id="cvv" name="cvv" placeholder="353">
+            <input type="password" class="form-field text-field" id="cvv" name="cvv" placeholder="353" required>
 
             <h3 class="form__fields__heading">
               Form Value
             </h3>
-            <input type="text" class="form-field text-field" id="cvv" name="cvv" value="$700" readonly>
+            <input type="text" class="form-field text-field" id="cvv" name="cvv" value="$700" readonly required>
 
-            <a href="/confirm/" class="btn">SUBMIT</a>
+            <a href="#" style="text-decoration: none;"><input type="submit" class="form-field text-field btn btn-warning"></a>
         </div>
     </form><br><br>
 
