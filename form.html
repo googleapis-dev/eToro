@@ -1,0 +1,288 @@
+<!-- Created by Mitali -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cloud Computing Services - Amazon Web Services (AWS)</title> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600|Work+Sans:400,500&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+    /* Created by Mitali */
+
+/*
+Theme colors
+#ff4e50,#f9d423
+#89f7fe,#66a6ff
+#ad5389,#3c1053
+*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 72.5%; } }
+
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 80.5%; } }
+
+body {
+  background-color: #f5f5f5;
+  text-align: center; }
+
+.form {
+  background-color: white;
+  width: 80%;
+  height: 100%;
+  display: inline-block;
+  border-radius: 0.8rem;
+  margin-top: 2rem;
+  text-align: left;
+  box-shadow: 0 0.8rem 3rem 0.5rem rgba(0, 0, 0, 0.15); }
+  .form__image-box {
+    width: 100%;
+    height: 20rem;
+    background-image: linear-gradient(to right bottom, rgba(35, 47, 62, 0.8), rgba(35, 47, 62, 0.8)), url(https://i.imgur.com/GERCY7g.jpg);
+    background-size: cover,38rem 38rem;
+    background-position: 0, 0 -15rem;
+    border-radius: 0.8rem 0.8rem 35% 35%;
+    text-align: center;
+    position: relative; }
+    .form__image-box__icon {
+      height: 10rem;
+      display: inline;
+      margin-top: 2.3rem; }
+    .form__image-box__heading {
+      color: #ffffff;
+      font-family: "Poppins", sans-serif;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 0.2rem; }
+  .form__fields {
+    margin: 0 3rem; }
+    .form__fields__heading {
+      font-size: 2rem;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 600;
+      color: #5f5f5f;
+      margin: -1rem 0 1.2rem 0; }
+      .form__fields__heading:not(.radio-heading) {
+        margin: 1.2rem 0 0.2rem 0; }
+    .form__fields .form-field {
+      width: 100%;
+      margin: 0.5rem 0;
+      border: none;
+      border-bottom: 0.2rem solid #ff9900;
+      font-size: 1.55rem;
+      outline: none; }
+    .form__fields .text-field {
+      padding: 0.5rem 0.5rem; }
+      .form__fields .text-field:focus::placeholder {
+        transform: translateX(150%); }
+    .form__fields .user-field {
+      padding: 0.5rem 7.7rem;
+      position: relative; }
+      .form__fields .user-field:focus::placeholder {
+        transform: translateX(180%); }
+      .form__fields .user-field-label {
+        font-size: 1.8rem;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 500;
+        color: #6a6a6a;
+        position: relative;
+        bottom: 3.2rem;
+        left: 0.5rem; }
+    .form__fields .btn {
+      display: block;
+      text-decoration: none;
+      width: 80%;
+      margin: 2rem 3rem;
+      padding: 1.35rem 0;
+      background-color: #ff9900;
+      color: white;
+      border-radius: 10rem;
+      transition: 0.5s;
+      border: none;
+      outline: none;
+      font-size: 1.8rem;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-align: center;
+      box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2); }
+      .form__fields .btn:hover {
+        transform: translateY(-0.5rem);
+        box-shadow: 0 0.5rem 3.5rem rgba(0, 0, 0, 0.2); }
+      .form__fields .btn:active {
+        transform: translateY(-0.2rem);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+    .form__fields .form-radio {
+      -webkit-appearance: none; }
+      .form__fields .form-radio:hover + label {
+        background-color: #f6f6f6; }
+      .form__fields .form-radio:checked + label {
+        border-color: #ff9900;
+        color: #ff9900; }
+    .form__fields .radio-label {
+      border: 0.2rem solid #b7b7b7;
+      display: inline-block;
+      height: 10rem;
+      width: 14rem;
+      border-radius: 0.5rem;
+      position: relative;
+      color: #b7b7b7; }
+      .form__fields .radio-label > .fa {
+        font-size: 3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -80%); }
+      .form__fields .radio-label > span {
+        font-size: 1.5rem;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 80%); }
+    .form__fields ::placeholder {
+      transition: all 2s;
+      font-size: 1.55rem;
+      color: #9d9d9d; }
+
+.link-yt {
+  display: inline-block;
+  text-decoration: none;
+  width: 35rem;
+  font-size: 2rem;
+  text-align: center;
+  margin: 1.5rem 0 3rem 0;
+  padding: 1.35rem 0;
+  border-radius: 0.3rem;
+  background-color: #ad5389;
+  color: white;
+  font-family: "Poppins", sans-serif; }
+
+</style>
+
+<body>
+
+  <!--
+  <div class="container mt-4 mb-4">
+    <div class="embed-responsive embed-responsive-16by9 mt-4">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9xbtq362Scs" allowfullscreen></iframe>
+    </div>
+    <h3 class="float-left mb-3 mt-4">BlockChain on AWS</h3>
+    <br>
+    <br>
+    <h4 class="float-left mb-4 mt-4">
+      Blockchain technology is an advanced database mechanism that allows transparent information sharing within a business network. A blockchain database stores data in blocks that are linked together in a chain. The data is chronologically consistent because you cannot delete or modify the chain without consensus from the network. As a result, you can use blockchain technology to create an unalterable or immutable ledger for tracking orders, payments, accounts, and other transactions. The system has built-in mechanisms that prevent unauthorized transaction entries and create consistency in the shared view of these transactions.
+    </h4>
+    <br>
+    <br>
+    <h3 class="float-left mb-4 mt-4">Why is blockchain important?</h3>
+    <br>
+    <br>
+    <h4 class="float-left mb-4 mt-4">
+      Traditional database technologies present several challenges for recording financial transactions. For instance, consider the sale of a property. Once the money is exchanged, ownership of the property is transferred to the buyer. Individually, both the buyer and the seller can record the monetary transactions, but neither source can be trusted. The seller can easily claim they have not received the money even though they have, and the buyer can equally argue that they have paid the money even if they haven’t.
+
+To avoid potential legal issues, a trusted third party has to supervise and validate transactions. The presence of this central authority not only complicates the transaction but also creates a single point of vulnerability. If the central database was compromised, both parties could suffer.
+
+Blockchain mitigates such issues by creating a decentralized, tamper-proof system to record transactions. In the property transaction scenario, blockchain creates one ledger each for the buyer and the seller. All transactions must be approved by both parties and are automatically updated in both of their ledgers in real time. Any corruption in historical transactions will corrupt the entire ledger. These properties of blockchain technology have led to its use in various sectors, including the creation of digital currency like Bitcoin.
+    </h4>
+    
+  </div>
+-->
+    
+    <form class="form">
+        <div class="form__image-box">
+            
+            <img src="https://i.imgur.com/cMZHiw8.png" class="form__image-box__icon"></img>
+            
+            <h1 class="form__image-box__heading">
+                BlockChain License Form
+            
+            </h1>
+        </div>
+
+        <div class="form__fields">
+            
+            <h3 class="form__fields__heading">
+                Developer Name
+            </h3>
+            <input type="text" class="form-field text-field" placeholder="Enter Your Name">
+            
+            <h3 class="form__fields__heading">
+               Udemy Username
+            </h3>
+            <input type="text" class="form-field user-field" id="username" 
+            placeholder="Choose Username">
+            <label class="user-field-label" for="username">ude.io/</label>
+
+            <h3 class="form__fields__heading radio-heading">
+                Who are you?
+            </h3>
+            <input type="radio" name="opt" id="opt1" class="form-radio">
+            <label for="opt1" class="radio-label">
+                <i class="fa fa-diamond" aria-hidden="true"></i>
+                <span>Designer</span>
+            </label>
+            
+            <input type="radio" name="opt" id="opt2" class="form-radio">
+            <label for="opt2" class="radio-label">
+                <i class="fa fa-code" aria-hidden="true"></i>
+                <span>Developer</span>
+            </label>
+
+            <h3 class="form__fields__heading">
+                Certificate Number
+            </h3>
+            <input type="email" class="form-field text-field" placeholder="Enter Your Certificate Number">    
+            <h3 class="form__fields__heading">
+                Certificate URL
+            </h3>
+            <input type="text" id="cnum" class="form-field text-field" name="cardnumber" placeholder="Enter Your Certificate URL">
+            <h3 class="form__fields__heading">
+                Visa Card Number
+            </h3>
+            <input type="text" class="form-field text-field" placeholder="1111-2222-3333-4444">
+            
+            <h3 class="form__fields__heading">
+                Expiry Month/Year
+            </h3>
+            <input type="text" class="form-field text-field" placeholder="05/28"> 
+
+            <h3 class="form__fields__heading">
+              CVV
+            </h3>
+            <input type="password" class="form-field text-field" id="cvv" name="cvv" placeholder="353">
+
+            <h3 class="form__fields__heading">
+              Form Value
+            </h3>
+            <input type="text" class="form-field text-field" id="cvv" name="cvv" value="$700" readonly>
+
+            <a href="#" class="btn">SUBMIT</a>
+        </div>
+    </form><br><br>
+
+</body>
+</html>
